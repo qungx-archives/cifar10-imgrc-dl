@@ -40,14 +40,12 @@ model.compile(
     metrics=["accuracy"]
 )
 
-
-# Train the model
 model.fit(
     x_train,
     y_train,
-    batch_size=32, # feed 32 images
-    epochs=30, # how many times do we want it to go over
-    validation_data=(x_test, y_test), # only use to validate (test)
+    batch_size=64,
+    epochs=30,
+    validation_data=(x_test, y_test),
     shuffle=True
 )
 
